@@ -1,0 +1,22 @@
+// Online Java Compiler
+// Use this editor to write, compile and run your Java code online
+import java.util.ArrayList;
+
+class Main {
+    public static int sumArray(ArrayList<Integer> lista){
+        int suma = 0;
+        for (int i: lista){
+            suma += lista.get(i-1);
+        }
+        return suma;
+    }
+
+    public static void main(String[] args) {
+        ArrayList<Integer> ejemplo = new ArrayList<> ();
+        ejemplo.add(1);
+        ejemplo.add(2);
+        ejemplo.add(3);
+        int sum = sumArray(ejemplo);
+        System.out.println(sum);
+    }
+}
