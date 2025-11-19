@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        // Área de entrada
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Ingrese una palabra: ");
+        String cadena = sc.nextLine();
+        System.out.println("La cadena tiene la siguiente cantidad de vocales: " + countVowels(cadena));
+        
+        // Área de ejecución
+        
+    }
+    
+    // Métodos añadidos
+    public static int countVowels(String text){
+        char[] vocales = {'a', 'e', 'i', 'o', 'u'};
+        int conteo = 0;
+        
+        for(int i = 0; i <= text.length()-1; i++){
+            for(int j = 0; j <= 4; j++){
+                if(text.charAt(i) == vocales[j]){
+                    conteo++;
+                }
+            }
+        }
+        
+        return conteo;
+        
+    }
+    
+}
